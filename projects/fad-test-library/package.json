@@ -1,0 +1,13 @@
+{
+  "name": "fad-test-library",
+  "version": "0.0.1",
+  "description": "This is a test library for improve abilities in Angular",
+  "keywords": ["test","modified fonts"],
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

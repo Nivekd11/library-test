@@ -102,6 +102,40 @@
           }
         }
       }
+    },
+    "fad-test-library": {
+      "projectType": "library",
+      "root": "projects/fad-test-library",
+      "sourceRoot": "projects/fad-test-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/fad-test-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/fad-test-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/fad-test-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fad-test-library/src/test.ts",
+            "tsConfig": "projects/fad-test-library/tsconfig.spec.json",
+            "karmaConfig": "projects/fad-test-library/karma.conf.js"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

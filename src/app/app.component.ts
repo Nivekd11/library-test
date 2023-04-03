@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'refillProject';
+  configuration = {
+    fontSize: 24,
+    fontColor: '#890b33',
+    fontFamily: 'Roboto',
+    value : 'Hola mundo'
+  };
+
+  onerror(error: Event) {
+    console.error("Error");
+    console.error(error);
+  }
+
+  oncomplete(success: Event) {
+    console.log('Complete:', success);
+  }
 }
